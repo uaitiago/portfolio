@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiago – Portfólio</title>
+  <meta name="description" content="Portfólio de desenvolvedor: projetos, habilidades e contato." />
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Script de tema muito cedo para evitar 'flash' -->
+  <script>
+    (function initTheme() {
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Tiago · Dev</span>
+      </div>
+
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button class="btn" id="themeToggle" aria-label="Alternar tema">🌗 Tema</button>
+        <a class="btn btn--primary" href="#contato">Fale comigo</a>
+        <button class="hamburger" id="menuBtn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-menu container" id="mobileMenu" aria-label="Menu móvel">
+      <ul>
+        <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+        <li><a href="#projetos" class="mobile-link">Projetos</a></li>
+        <li><a href="#contato" class="mobile-link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">Disponível para freelas · Front + Back (Python)</span>
+        <h1>Construo sites e APIs rápidos, acessíveis e bonitos.</h1>
+        <p class="lead">Sou professor e desenvolvedor. Gosto de resolver problemas e entregar software simples, escalável e com boa experiência de usuário.</p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="#contato">Pedir orçamento</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Resumo de credenciais">
+        <div>
+          <strong>Stack principal</strong>
+          <small>HTML · CSS · JS · React · FastAPI · SQLite/Postgres</small>
+        </div>
+        <div>
+          <strong>Serviços</strong>
+          <small>Landing pages · APIs · Integração · Otimização</small>
+        </div>
+        <div>
+          <strong>Entrega</strong>
+          <small>GitHub + Deploy (Vercel/Render/Railway)</small>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2 class="section-title">Sobre mim</h2>
+      <p>Olá! Sou o Tiago. Trabalho com ensino e desenvolvimento. Nos últimos anos, foquei em criar experiências web rápidas e acessíveis, além de APIs limpas com Python (FastAPI). Tenho facilidade em entender requisitos e transformar ideias em produtos mínimos viáveis.</p>
+      <p class="note">Dica: troque este texto pela sua bio real (quem você ajuda, problemas que resolve, tecnologias que domina e como prefere trabalhar).</p>
+
+      <h3 class="section-title" style="margin-top:28px">Habilidades</h3>
+      <div class="skills" aria-label="Lista de habilidades">
+        <span class="chip">HTML Semântico</span>
+        <span class="chip">CSS Flex/Grid</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">SQLite / PostgreSQL</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <div class="container">
+      <h2 class="section-title">Projetos</h2>
+      <div class="projects-grid" aria-live="polite">
+        <article class="card">
+          <div class="thumb" role="img" aria-label="Miniatura do Projeto 1"></div>
+          <div class="card-body">
+            <h3>Portfólio Pessoal</h3>
+            <p>Landing page responsiva com HTML/CSS/JS, acessível e leve. Inclui tema escuro e otimizações de performance.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn" onclick="alert('Substitua pelo link do GitHub/Deploy');return false;">GitHub</a>
+            <a href="#" class="btn btn--primary" onclick="alert('Substitua pelo link do Deploy (Vercel/GitHub Pages)');return false;">Ver online</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" role="img" aria-label="Miniatura do Projeto 2"></div>
+          <div class="card-body">
+            <h3>API To‑Do (FastAPI)</h3>
+            <p>API REST com CRUD de tarefas, documentação automática (OpenAPI/Swagger) e banco SQLite.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn" onclick="alert('Link do repositório da API');return false;">GitHub</a>
+            <a href="#" class="btn btn--primary" onclick="alert('Link do deploy (Render/Railway)');return false;">Ver docs</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" role="img" aria-label="Miniatura do Projeto 3"></div>
+          <div class="card-body">
+            <h3>App Tarefas (React)</h3>
+            <p>Frontend em React consumindo a API To‑Do. Foco em UX, estados com hooks e roteamento simples.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn" onclick="alert('Link do repositório do frontend');return false;">GitHub</a>
+            <a href="#" class="btn btn--primary" onclick="alert('Link do deploy (Vercel/Netlify)');return false;">Ver online</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title">Vamos conversar</h2>
+        <p>Me conte sobre seu projeto. Em geral, respondo em até 24 horas. Se preferir, chame no WhatsApp.</p>
+        <p class="note">Este formulário é apenas demonstrativo (sem back‑end). No JS abaixo mostro como capturar os dados e validar.</p>
+      </div>
+
+      <form id="contactForm" novalidate>
+        <div>
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" placeholder="Seu nome" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="voce@email.com" required />
+        </div>
+        <div>
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" placeholder="O que você precisa?" required></textarea>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="btn btn--primary" type="submit">Enviar</button>
+          <span id="formStatus" class="note" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+      <span>© <span id="year"></span> Tiago. Feito com HTML, CSS e JS.</span>
+      <div style="display:flex; gap:12px;">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS externo com defer para carregar após o HTML -->
+  <script src="main.js" defer></script>
+</body>
+</html>
