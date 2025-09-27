@@ -67,8 +67,7 @@ nav a:hover { opacity: 1; }
 h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height:1.1; margin:12px 0; }
 .lead { font-size:1.1rem; color: var(--muted); margin-bottom:22px; }
 .hero-cta { display:flex; gap:12px; flex-wrap:wrap; }
-.hero-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px; display:grid; gap:10px; }
-.hero-card small { color: var(--muted); }
+.hero-image img { width:100%; }
 
 /* Seções */
 section { padding: 60px 0; }
@@ -84,6 +83,8 @@ section { padding: 60px 0; }
 .card-body { padding:16px; display:grid; gap:8px; }
 .card-body h3 { margin:0; font-size:1.1rem; }
 .card-body p { margin:0; color: var(--muted); }
+.card-size { display: flex; justify-content: center; align-items: center; }
+.card-size img { width:50%; height: auto;}
 .card-footer { padding:12px 16px; display:flex; gap:10px; align-items:center; border-top:1px solid var(--border); }
 
 /* Contato */
